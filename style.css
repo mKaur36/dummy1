@@ -1,0 +1,120 @@
+*{
+box-sizing: border-box;
+}
+.body{
+    margin: 0%;
+}
+.wrapper{ 
+    min-height: 80vh;
+    display: grid;
+    gap: 5px;
+    /*grid-template-columns: 1fr 2fr 1fr;*/
+    grid-template-areas: "header header header"
+    "title title title"
+    "banner banner bb1"
+    "banner banner bb2"
+    "side-menu main main"
+    "tags main main"
+    "recently main main"
+    "footer footer footer";
+    
+    
+}
+.wrapper > *{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    background: linear-gradient(skyblue, blue);
+    min-height: 20vh;
+    grid-area: header;
+    
+}
+.title{background: linear-gradient(lightgreen, aqua, pink);
+min-height: 20vh;
+grid-area: title;}
+
+.banner{
+    background: linear-gradient(royalblue, yellow);
+    min-height: 10vh;
+    grid-area: banner;
+
+    
+}
+.bb1{ background: rgb(149, 237, 149);
+ grid-column-start: 2;
+ grid-area: bb1;
+}
+.bb2{background-color: blanchedalmond;
+    grid-area: bb2;
+}
+.side-menu{ background: radial-gradient(skyblue,darkgreen);
+     min-height: 10vh;
+     grid-area: side-menu;
+}
+.tags{background-color: rgb(116, 163, 136);
+
+    grid-area:tags;}
+
+.recently{background-color: yellowgreen;
+    grid-area: recently;
+}
+.main{ background: palegoldenrod;
+    grid-area: main;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.main > div{
+    border: 1px solid blue;
+    margin: 10px;
+    min-height: 150px;
+    background: rgb(10, 125, 197);
+    border-radius: 5px;
+}
+.footer{
+    background-color:darkblue;
+color: azure; 
+grid-area: footer;
+}
+/*ipad and above*/
+@media (max-width: 768px){
+    .wrapper{ 
+        min-height: 80vh;
+        display: grid;
+        gap: 5px;
+        grid-template-areas: "header header"
+        "title title"
+        "banner banner"
+        "bb1 bb2"
+        "side-menu side-menu"
+        "main main"
+        "tags recently"
+        "footer footer";
+        
+        
+    }
+}
+/**/
+@media (max-width:500px){
+    .wrapper{ 
+        min-height: 80vh;
+        display: grid;
+        gap: 5px;
+        grid-template-areas: "header"
+        "title"
+        "banner"
+        "bb1"
+        "bb2"
+        "side-menu"
+        "main"
+        "recently"
+        "tags"
+        "footer";
+        
+        
+    }
+
+}
